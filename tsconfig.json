@@ -1,0 +1,17 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+, "components/viewPost.tsx", "components/Admin/UploidPub.tsx", "components/Admin/AdminForm.tsx", "components/Admin/AdminLoginPage.tsx", "app/(tabs)/index.tsx"  ]
+}

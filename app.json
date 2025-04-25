@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "myapp",
+    "name": "EduConnect",
     "slug": "myapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/OnifraLogo.jpg",
-    "scheme": "myapp",
+    "scheme": "EduConnect",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/OnifraLogo.jpg",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.tsiory518c.apkonifra"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +37,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "993a9b79-a441-4184-911f-738b63414f92"
+      }
+    },
+    "owner": "tsiory518c"
   }
 }

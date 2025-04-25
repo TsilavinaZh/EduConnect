@@ -58,7 +58,7 @@ const AboutPage = () => {
           Tsiory.aina69@gmail.com  
         </Text>
         <Text style={styles.footerText}>ruffinihasina@gmail.com</Text>
-        <Text style={styles.footerText}>+261 38 39 221 49, +261 34 33 069 4</Text>
+        <Text style={styles.footerText}>+261 38 39 221 49, +261 34 33 069 41</Text>
       </View>
 
       {/* Btn feedback */}

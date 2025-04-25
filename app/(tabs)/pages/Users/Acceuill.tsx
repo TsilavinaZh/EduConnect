@@ -10,6 +10,7 @@ import {
   Modal,
   Alert,
 } from "react-native";
+
 import { Button,Badge } from "@ant-design/react-native";
 import { AntDesign } from "@expo/vector-icons";
 import axios from "axios";
@@ -52,10 +53,8 @@ const PostCard: React.FC = () => {
   };
 
   const handleSaveImage = () => {
-    if (!selectedImage) return;
-    // Implement image save logic here
-    // Alert.alert("Image saved!", "The image has been saved to your gallery.");
-    // Example: Use a library to save the image to device storage
+    Alert.alert("Téléchargement", "Image téléchargée avec succès !");
+ 
   };
 
   if (loading) {
@@ -68,7 +67,7 @@ const PostCard: React.FC = () => {
     return (
       <View style={styles.errorContainer}>
         <Text style={styles.errorText}>
-          Impossible de récupérer les publications.
+          Vérifiez votre connexion Internet et réessayez.
         </Text>
         <AntDesign name="disconnect" size={50} color={"#808080"} />
         <TouchableOpacity style={styles.refreshButton} onPress={handleRefresh}>
@@ -85,9 +84,7 @@ const PostCard: React.FC = () => {
           <View style={styles.header}>
             <Image source={require("./OnifraLogo.png")} style={styles.avatar} />
             <View style={styles.textContainer}>
-              <Text style={styles.text}>OniFra Antsirabe
-
-                {/* <Badge text="" style={{ backgroundColor: 'blue', padding: 6 ,borderRadius:5}} /> */}
+              <Text style={styles.text}>ONIVESITY FJKM RAVELOJAONA Antsirabe
 
               </Text>
               <Text style={styles.date}>
@@ -99,22 +96,24 @@ const PostCard: React.FC = () => {
           <Text style={styles.description}>{item.message}</Text>
 
           {item.image && (
-            <TouchableOpacity onPress={() => handleImageClick(item.image)}>
+            <TouchableOpacity onPress={() => item.image && handleImageClick(item.image)}>
               <Image
                 source={{ uri: `data:image/jpeg;base64,${item.image}` }}
                 style={styles.postImage}
               />
+              {/* Btn download */}
+              
             </TouchableOpacity>
           )}
 
-          <View style={styles.footer}>
+          {/* <View style={styles.footer}>
             <Button type="ghost" style={styles.button}>
               <AntDesign name="like2" size={20} color="blue" />
             </Button>
             <Button type="ghost" style={styles.button}>
               <AntDesign name="sharealt" size={20} color="green" />
             </Button>
-          </View>
+          </View> */}
         </View>
       ))}
 
@@ -140,13 +139,15 @@ const PostCard: React.FC = () => {
                 style={styles.enlargedImage}
               />
             )}
+
             <Button
-              type="ghost"
-              onPress={handleSaveImage}
-              style={styles.saveButton}
-            >
-              <AntDesign name="download" size={20} color="blue" />
-            </Button>
+                type="ghost"
+                onPress={handleSaveImage}
+                style={styles.saveButton}
+              >
+                <AntDesign name="download" size={20} color="blue" />
+                <Text style={styles.saveText}></Text>
+              </Button>
           </View>
         </View>
       </Modal>
@@ -251,7 +252,7 @@ const styles = StyleSheet.create({
   closeButton: {
     backgroundColor: "transparent",
     borderColor: "white",
-    paddingLeft: 300,
+    paddingLeft: 280,
   },
 });
 

@@ -56,7 +56,7 @@ const Publier: React.FC = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View>
       <ScrollView style={styles.scrollContainer}>
         <Text style={styles.title}>Créer une Publication</Text>
 
@@ -110,6 +110,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
+    width: 300,
   },
   title: {
     fontSize: 22,
@@ -162,4 +163,3 @@ const styles = StyleSheet.create({
 });
 
 export default Publier;
-

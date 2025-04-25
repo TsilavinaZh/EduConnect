@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, TextInput, StyleSheet, Text, TouchableOpacity, Alert } from "react-native";
-import AdminPublishPage from "./AdminPublishFormPage";
+// import AdminPublishPage from "./AdminPublishFormPage";
+import AdminForm from "./AdminForm";
 
 const LoginAdminPage = () => {
   const [email, setEmail] = useState("");
@@ -19,7 +20,8 @@ const LoginAdminPage = () => {
   return (
     <View style={styles.container}>
       {isAuthenticated ? (
-        <AdminPublishPage /> 
+        <AdminForm /> 
+
       ) : (
         <>
           <Text style={styles.title}>Admin</Text>

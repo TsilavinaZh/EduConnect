@@ -1,5 +1,5 @@
 {
-  "name": "myapp",
+  "name": "EduConnect",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
@@ -25,6 +25,7 @@
     "expo": "~52.0.30",
     "expo-blur": "~14.0.3",
     "expo-constants": "~17.0.5",
+    "expo-document-picker": "^13.0.3",
     "expo-font": "~13.0.3",
     "expo-haptics": "~14.0.1",
     "expo-image-picker": "^16.0.5",
